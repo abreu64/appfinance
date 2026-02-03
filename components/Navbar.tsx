@@ -24,15 +24,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenFeatures, onOpenGallery, o
   ];
 
   return (
-    <nav className="fixed top-6 left-0 right-0 z-50 px-6 pointer-events-none">
-      <div className="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-zinc-950 border-b border-white/5">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
         {/* Logo Area */}
         <div
-          className="flex items-center gap-3 cursor-pointer bg-black pl-2 pr-6 py-2 rounded-full border border-zinc-800 shadow-2xl transition-transform hover:scale-105"
+          className="flex items-center gap-3 cursor-pointer group transition-transform hover:scale-105"
           onClick={() => navigate('/')}
         >
-          <div className="bg-emerald-500 p-2.5 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+          <div className="bg-emerald-500 p-2 rounded-lg shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all group-hover:shadow-[0_0_25px_rgba(16,185,129,0.6)]">
             <TrendingUp className="w-5 h-5 text-zinc-950" strokeWidth={3} />
           </div>
           <span className="text-lg font-black tracking-tighter uppercase italic text-zinc-200">
@@ -40,17 +40,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenFeatures, onOpenGallery, o
           </span>
         </div>
 
-        {/* Navigation Floating Island */}
-        <div className="hidden md:flex items-center gap-2 bg-black p-2 rounded-full border border-zinc-800 shadow-2xl">
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center gap-8">
           {navItems.map((item, idx) => (
             <button
               key={idx}
               onClick={item.onClick}
               className={`
-                px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all duration-300 cursor-pointer
+                text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all duration-300
                 ${item.active
-                  ? 'bg-zinc-800 text-emerald-400 shadow-inner'
-                  : 'text-zinc-400 hover:text-zinc-100 hover:bg-white/5'}
+                  ? 'text-emerald-400'
+                  : 'text-zinc-400 hover:text-white'}
               `}
             >
               {item.icon}
@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenFeatures, onOpenGallery, o
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button onClick={onTestNow} variant="glow" size="md" className="!py-3 !px-8 text-xs cursor-pointer">
+          <Button onClick={onTestNow} variant="glow" size="md" className="!py-2.5 !px-6 text-xs cursor-pointer">
             Testar Agora
           </Button>
         </div>
