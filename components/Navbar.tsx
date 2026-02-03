@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenFeatures, onOpenGallery, o
 
         {/* Logo Area */}
         <div
-          className="flex items-center gap-3 cursor-pointer bg-zinc-900/80 backdrop-blur-md pl-2 pr-6 py-2 rounded-full border border-white/5 shadow-2xl transition-transform hover:scale-105"
+          className="flex items-center gap-3 cursor-pointer bg-zinc-900 pl-2 pr-6 py-2 rounded-full border border-white/5 shadow-2xl transition-transform hover:scale-105"
           onClick={() => navigate('/')}
         >
           <div className="bg-emerald-500 p-2.5 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.4)]">
@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenFeatures, onOpenGallery, o
         </div>
 
         {/* Navigation Floating Island */}
-        <div className="hidden md:flex items-center gap-2 bg-zinc-900/90 backdrop-blur-xl p-2 rounded-full border border-white/10 shadow-2xl">
+        <div className="hidden md:flex items-center gap-2 bg-zinc-900 p-2 rounded-full border border-white/10 shadow-2xl">
           {navItems.map((item, idx) => (
             <button
               key={idx}
