@@ -16,7 +16,7 @@ export const GalleryPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-zinc-950 animate-fade-in flex flex-col">
+        <div className="min-h-screen bg-zinc-900 animate-fade-in flex flex-col">
             <Navbar
                 onOpenFeatures={() => navigate('/')}
                 onOpenGallery={() => { }}
@@ -33,12 +33,12 @@ export const GalleryPage = () => {
                 <div className="pb-32 pt-10 flex flex-col items-center justify-center px-6">
                     <Button
                         onClick={openApp}
-                        className="w-full max-w-md md:max-w-xl text-lg md:text-3xl py-8 md:py-10 px-8 md:px-16 shadow-[0_0_60px_rgba(16,185,129,0.3)] group"
+                        className="w-full max-w-md md:max-w-xl text-lg md:text-3xl py-8 md:py-10 px-8 md:px-16 shadow-[0_0_60px_rgba(139,92,246,0.3)] group"
                     >
                         Teste o aplicativo 7 dias gratis
                         <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
                     </Button>
-                    <p className="mt-8 text-zinc-600 text-[10px] uppercase tracking-[0.3em] font-black">Comece hoje sua revolução financeira</p>
+                    <p className="mt-8 text-amber-500/60 text-[10px] uppercase tracking-[0.3em] font-black">Comece hoje sua revolução financeira</p>
                 </div>
             </main>
 

@@ -25,10 +25,10 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const variants = {
-    primary: "bg-emerald-500 text-zinc-950 hover:bg-emerald-400 shadow-[0_4px_20px_-5px_rgba(16,185,129,0.4)] hover:shadow-[0_8px_30px_-5px_rgba(16,185,129,0.6)]",
+    primary: "bg-violet-600 text-white hover:bg-violet-500 shadow-[0_4px_20px_-5px_rgba(139,92,246,0.4)] hover:shadow-[0_8px_30px_-5px_rgba(139,92,246,0.6)]",
     secondary: "bg-zinc-100 text-zinc-950 hover:bg-white border border-transparent",
-    outline: "border border-emerald-500/30 text-emerald-400 hover:border-emerald-500 hover:bg-emerald-500/10 backdrop-blur-sm",
-    glow: "bg-gradient-to-r from-emerald-500 to-teal-400 text-zinc-950 shadow-[0_0_40px_-10px_rgba(16,185,129,0.5)] hover:shadow-[0_0_60px_-10px_rgba(16,185,129,0.7)] hover:brightness-110"
+    outline: "border border-violet-500/30 text-violet-400 hover:border-violet-500 hover:bg-violet-500/10 backdrop-blur-sm",
+    glow: "bg-gradient-to-r from-violet-600 to-blue-500 text-white shadow-[0_0_40px_-10px_rgba(139,92,246,0.5)] hover:shadow-[0_0_60px_-10px_rgba(139,92,246,0.7)] hover:brightness-110"
   };
 
   return (

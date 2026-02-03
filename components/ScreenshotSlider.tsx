@@ -20,7 +20,7 @@ export const FullscreenGallery: React.FC = () => {
 
   useEffect(() => {
     if (isPaused) return;
-    const interval = 50; 
+    const interval = 50;
     const duration = 5000;
     const increment = (interval / duration) * 100;
     const timer = setInterval(() => {
@@ -41,8 +41,8 @@ export const FullscreenGallery: React.FC = () => {
   };
 
   return (
-    <section 
-      className="relative w-full pt-24 pb-12 md:pt-32 md:pb-20 bg-zinc-950 overflow-hidden" 
+    <section
+      className="relative w-full pt-24 pb-12 md:pt-32 md:pb-20 bg-zinc-900 overflow-hidden"
       id="screens"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -51,7 +51,7 @@ export const FullscreenGallery: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 md:mb-24">
-          <span className="text-emerald-500 font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-4 block">Experiência Imersiva</span>
+          <span className="text-amber-500 font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-4 block">Experiência Imersiva</span>
           <h2 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-none">
             VISÃO <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 italic text-white">ESTRATÉGICA.</span>
           </h2>
@@ -59,16 +59,16 @@ export const FullscreenGallery: React.FC = () => {
 
         <div className="relative group max-w-6xl mx-auto">
           <div className="absolute top-1/2 -left-4 md:-left-16 -translate-y-1/2 z-40 opacity-0 group-hover:opacity-100 transition-all duration-500">
-            <button 
+            <button
               onClick={prev}
               className="p-4 md:p-6 rounded-full glass-morphism border border-white/10 text-white hover:bg-emerald-500 hover:text-zinc-950 transition-all active:scale-90 shadow-2xl"
             >
               <ChevronLeft size={32} />
             </button>
           </div>
-          
+
           <div className="absolute top-1/2 -right-4 md:-right-16 -translate-y-1/2 z-40 opacity-0 group-hover:opacity-100 transition-all duration-500">
-            <button 
+            <button
               onClick={next}
               className="p-4 md:p-6 rounded-full glass-morphism border border-white/10 text-white hover:bg-emerald-500 hover:text-zinc-950 transition-all active:scale-90 shadow-2xl"
             >
@@ -78,20 +78,19 @@ export const FullscreenGallery: React.FC = () => {
 
           <div className="relative rounded-[2rem] md:rounded-[4rem] overflow-hidden glass-morphism border border-white/10 shadow-4xl aspect-video md:aspect-[21/10] z-10 bg-zinc-900/50">
             {SCREENSHOTS.map((screen, index) => (
-              <div 
+              <div
                 key={index}
-                className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                  index === currentIndex 
-                    ? 'opacity-100 translate-x-0 scale-100' 
+                className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentIndex
+                    ? 'opacity-100 translate-x-0 scale-100'
                     : 'opacity-0 translate-x-full scale-105 pointer-events-none'
-                }`}
+                  }`}
               >
-                <img 
-                  src={screen.url} 
+                <img
+                  src={screen.url}
                   alt={screen.title}
                   className="w-full h-full object-contain"
                 />
-                
+
                 {/* Overlay de contraste aprimorado para legibilidade em telas claras */}
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent flex flex-col justify-end p-8 md:p-20">
                   <div className={`max-w-2xl transition-all duration-1000 delay-300 transform ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -111,16 +110,15 @@ export const FullscreenGallery: React.FC = () => {
 
           <div className="flex justify-center gap-4 mt-12 md:mt-16">
             {SCREENSHOTS.map((_, i) => (
-              <button 
+              <button
                 key={i}
                 onClick={() => handleIndicatorClick(i)}
                 className="relative h-1 flex items-center group/dot"
               >
-                <div className={`h-full transition-all duration-500 rounded-full bg-zinc-800 ${
-                  i === currentIndex ? 'w-24' : 'w-4'
-                }`}>
+                <div className={`h-full transition-all duration-500 rounded-full bg-zinc-800 ${i === currentIndex ? 'w-24' : 'w-4'
+                  }`}>
                   {i === currentIndex && (
-                    <div 
+                    <div
                       className="h-full bg-emerald-500 rounded-full shadow-[0_0_15px_rgba(16,185,129,1)]"
                       style={{ width: `${progress}%` }}
                     />

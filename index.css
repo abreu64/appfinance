@@ -5,7 +5,7 @@
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
-    background-color: #09090b;
+    background-color: #18181b;
 }
 
 .glass-morphism {
@@ -15,7 +15,7 @@ body {
 }
 
 .hero-gradient {
-    background: radial-gradient(circle at 50% -20%, rgba(16, 185, 129, 0.15), transparent 70%),
+    background: radial-gradient(circle at 50% -20%, rgba(139, 92, 246, 0.15), transparent 70%),
         radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.1), transparent 50%);
 }
 
@@ -53,11 +53,11 @@ body {
 
 .animate-rainbow-text {
     background: linear-gradient(90deg,
-            #10b981,
-            #3b82f6,
             #8b5cf6,
+            #3b82f6,
+            #6366f1,
             #d946ef,
-            #10b981);
+            #8b5cf6);
     background-size: 300% auto;
     -webkit-background-clip: text;
     background-clip: text;
