@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
+import { TrialButton } from '../components/TrialButton';
 import { Button } from '../components/Button';
 import { Footer } from '../components/Footer';
 import {
@@ -99,10 +100,7 @@ export const HomePage = () => {
                     </p>
 
                     <div className="flex flex-col items-center gap-8">
-                        <Button onClick={openApp} variant="glow" className="text-xl md:text-3xl py-8 md:py-10 px-12 md:px-24">
-                            Teste o aplicativo 7 dias grátis
-                            <ArrowRight size={28} className="group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
+                        <TrialButton onClick={openApp} />
                         <div className="flex items-center gap-6 text-amber-500/80 text-[10px] font-black uppercase tracking-[0.3em]">
                             <span>Criptografia Ponta a Ponta</span>
                             <span className="w-1.5 h-1.5 bg-amber-400 rounded-full shadow-[0_0_10px_rgba(251,191,36,0.5)]"></span>
@@ -179,10 +177,7 @@ export const HomePage = () => {
             </section>
 
             <div className="flex flex-col items-center justify-center pb-24">
-                <Button onClick={openApp} variant="glow" className="text-xl md:text-3xl py-8 md:py-10 px-12 md:px-24">
-                    Teste o aplicativo 7 dias grátis
-                    <ArrowRight size={28} className="group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
+                <TrialButton onClick={openApp} />
             </div>
 
             <Footer />

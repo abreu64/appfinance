@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenFeatures, onOpenGallery, o
               key={idx}
               onClick={item.onClick}
               className={`
-                text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all duration-300
+                text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all duration-300 cursor-pointer
                 ${item.active
                   ? 'text-violet-400'
                   : 'text-zinc-400 hover:text-white'}

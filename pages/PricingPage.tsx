@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/Button';
+import { TrialButton } from '../components/TrialButton';
 import { Navbar } from '../components/Navbar';
 import { ChevronLeft, CheckCircle2 } from 'lucide-react';
 
@@ -37,9 +38,7 @@ export const PricingPage = () => {
                     </p>
 
                     <div className="flex flex-col items-center gap-8 w-full px-6">
-                        <Button onClick={openApp} className="text-xl md:text-3xl py-8 md:py-10 px-12 md:px-24 w-full md:w-auto">
-                            Teste o aplicativo 7 dias gratis
-                        </Button>
+                        <TrialButton onClick={openApp} className="w-full md:w-auto" />
 
                         <div className="flex flex-wrap justify-center gap-8 text-zinc-600 uppercase tracking-[0.3em] text-[10px] font-black">
                             <span className="flex items-center gap-2"><CheckCircle2 size={12} className="text-violet-500" /> IA Integrada</span>
