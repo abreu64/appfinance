@@ -4,6 +4,8 @@ import { HomePage } from './pages/HomePage';
 import { GalleryPage } from './pages/GalleryPage';
 import { PricingPage } from './pages/PricingPage';
 import { FeaturesPage } from './pages/FeaturesPage';
+import { PrivacyPage } from './pages/PrivacyPage';
+import { TermsPage } from './pages/TermsPage';
 
 // ScrollToTop component to handle scroll reset on route change
 const ScrollToTop = () => {
@@ -24,6 +26,8 @@ const App: React.FC = () => {
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
         </Routes>
       </div>
     </BrowserRouter>

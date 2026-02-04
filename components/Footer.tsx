@@ -15,7 +15,21 @@ export const Footer = () => {
                     <span className="text-3xl font-black tracking-tighter uppercase italic text-white">APP-FINANCE<span className="text-violet-500">PRO</span></span>
                 </div>
 
-                <p className="text-amber-500/40 text-[10px] tracking-[0.4em] uppercase">© 2025 APP-FINANCEPRO. TODOS OS DIREITOS RESERVADOS.</p>
+                <div className="flex flex-col md:flex-row items-center gap-8 text-[10px] font-bold uppercase tracking-widest">
+                    <button
+                        onClick={() => navigate('/privacy')}
+                        className="text-zinc-500 hover:text-violet-400 transition-colors cursor-pointer"
+                    >
+                        Política de Privacidade
+                    </button>
+                    <button
+                        onClick={() => navigate('/terms')}
+                        className="text-zinc-500 hover:text-violet-400 transition-colors cursor-pointer"
+                    >
+                        Termos de Uso
+                    </button>
+                    <p className="text-amber-500/40 tracking-[0.4em]">© 2025 APP-FINANCEPRO. TODOS OS DIREITOS RESERVADOS.</p>
+                </div>
             </div>
         </footer>
     );
