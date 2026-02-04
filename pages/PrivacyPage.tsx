@@ -135,7 +135,7 @@ export const PrivacyPage = () => {
                             <p className="mb-4">
                                 Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato com nosso Encarregado de Proteção de Dados:
                             </p>
-                            <p className="text-violet-400 font-bold text-lg">privacidade@financepro.com.br</p>
+                            <p className="text-violet-400 font-bold text-lg">lifequantica@gmail.com</p>
                         </div>
                     </div>
                 </div>
