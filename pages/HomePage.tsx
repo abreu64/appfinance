@@ -125,18 +125,18 @@ export const HomePage = () => {
                     {/* Container do Vídeo com clique para som */}
                     <div
                         onClick={() => toggleMute()}
-                        className="relative aspect-video rounded-[2rem] md:rounded-[3.5rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-[0_0_100px_rgba(16,185,129,0.15)] group cursor-pointer"
+                        className="relative max-w-[300px] mx-auto aspect-[9/19] rounded-[3rem] overflow-hidden border-[8px] border-zinc-800 bg-black shadow-[0_0_100px_rgba(16,185,129,0.2)] group cursor-pointer"
                     >
                         {/* Camada de Granulação e Textura (Subtle Grain) */}
                         <div className="absolute inset-0 z-10 pointer-events-none opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
 
                         {/* Vinheta Premium */}
-                        <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,9,11,0.4)_100%)]"></div>
+                        {/* Vinheta removida para transparência total do vídeo */}
 
                         <video
                             ref={videoRef}
-                            src="https://xqcwlxyflniaptjqwdwr.supabase.co/storage/v1/object/public/financaspessoaistelasmobile/Agent_video_Pippit_20260131124710.mp4"
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-[0.9] contrast-[1.1] saturate-[0.8]"
+                            src="https://xqcwlxyflniaptjqwdwr.supabase.co/storage/v1/object/public/financaspessoaistelasmobile/video.mp4"
+                            className="w-full h-full object-contain brightness-[1.0] contrast-[1.0] transition-transform duration-700"
                             autoPlay
                             muted={isMuted}
                             onEnded={handleVideoEnd}
