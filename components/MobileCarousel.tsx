@@ -48,8 +48,10 @@ export const MobileCarousel: React.FC = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Background Glow */}
+      {/* Background Glow - Subtle */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
@@ -81,20 +83,17 @@ export const MobileCarousel: React.FC = () => {
             </button>
           </div>
 
-          {/* Image Container - Moldura removida conforme solicitado */}
+          {/* Container do Mobile - Apenas Imagem */}
           <div className="relative w-full max-w-[320px] aspect-[9/19.5] z-20 group">
-            {/* Sombra de destaque para a imagem flutuante */}
-            <div className="absolute inset-0 shadow-[0_30px_60px_-15px_rgba(16,185,129,0.15)] group-hover:shadow-emerald-500/25 transition-shadow duration-700"></div>
-
-            <div className="w-full h-full relative overflow-hidden bg-zinc-950/20">
+            <div className="w-full h-full relative overflow-hidden bg-zinc-950/20 shadow-[0_30px_60px_-15px_rgba(16,185,129,0.15)]">
               {MOBILE_SCREENSHOTS.map((screen, index) => (
                 <div
                   key={index}
                   className={`absolute inset-0 transition-all duration-1000 cubic-bezier(0.23,1,0.32,1) ${index === currentIndex
-                      ? 'opacity-100 scale-100 translate-x-0'
-                      : index < currentIndex
-                        ? 'opacity-0 scale-95 -translate-x-12'
-                        : 'opacity-0 scale-95 translate-x-12'
+                    ? 'opacity-100 scale-100 translate-x-0'
+                    : index < currentIndex
+                      ? 'opacity-0 scale-95 -translate-x-12'
+                      : 'opacity-0 scale-95 translate-x-12'
                     }`}
                 >
                   <img
