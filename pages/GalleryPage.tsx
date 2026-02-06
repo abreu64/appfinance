@@ -24,9 +24,9 @@ export const GalleryPage = () => {
                 onTestNow={openApp}
             />
             {/* Added spacer for fixed navbar */}
-            <div className="h-24"></div>
+            <div className="h-20"></div>
 
-            <main className="flex-grow pt-10">
+            <main className="flex-grow pt-4">
                 <FullscreenGallery />
                 <MobileCarousel />
 

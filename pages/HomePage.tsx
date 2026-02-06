@@ -53,7 +53,7 @@ export const HomePage = () => {
             <Navbar onTestNow={openApp} />
 
             {/* Hero Section Premium */}
-            <section className="relative pt-40 md:pt-64 pb-24 px-6 hero-gradient">
+            <section className="relative pt-24 md:pt-32 pb-24 px-6 hero-gradient">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-violet-600/10 blur-[120px] rounded-full pointer-events-none"></div>
 
                 <div className="max-w-7xl mx-auto text-center relative z-10">

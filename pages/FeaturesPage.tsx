@@ -24,7 +24,7 @@ export const FeaturesPage = () => {
         <div className="bg-zinc-900 min-h-screen animate-fade-in flex flex-col">
             <Navbar onTestNow={openApp} activeSection="features" />
 
-            <div className="pt-32 px-6 flex-grow">
+            <div className="pt-24 px-6 flex-grow">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col items-center text-center mb-24 gap-8">
                         <div className="max-w-2xl">
