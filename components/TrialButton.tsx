@@ -12,13 +12,18 @@ export const TrialButton: React.FC<TrialButtonProps> = ({ onClick, className = '
         <Button
             onClick={onClick}
             variant="glow"
-            className={`text-xl md:text-3xl py-8 md:py-10 px-12 md:px-24 flex flex-col items-center group ${className}`}
+            className={`py-3 md:py-4 px-6 md:px-10 flex flex-col items-center ${className}`}
         >
-            <span className="flex items-center gap-4">
-                Teste grátis por 7 dias
-                <ArrowRight size={28} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </span>
-            <span className="text-sm md:text-lg font-medium opacity-70">depois R$35,00/Mês</span>
+            <div className="flex flex-col items-center leading-tight">
+                <span className="text-sm md:text-xl font-bold flex items-center gap-2">
+                    Teste por 7 dias
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300 opacity-70" />
+                    Depois R$35,00
+                </span>
+                <span className="text-[10px] md:text-sm font-normal opacity-60 mt-1">
+                    Cancele a qualquer momento
+                </span>
+            </div>
         </Button>
     );
 };
