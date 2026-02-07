@@ -59,16 +59,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenFeatures, onOpenGallery, o
           ))}
         </div>
 
-        {/* CTA Button */}
         <div className="hidden md:block">
-          <Button onClick={onTestNow} variant="glow" size="md" className="!py-2.5 !px-6 text-xs cursor-pointer">
-            Testar Agora
+          <Button onClick={onTestNow} variant="glow" size="md" className="!py-2.5 !px-6 text-[10px] cursor-pointer font-black uppercase tracking-widest italic">
+            Teste por 7 dias <span className="text-violet-400 px-1">&gt;</span> R$35,00/Mês
           </Button>
         </div>
 
-        {/* Mobile Menu Placeholder */}
         <div className="md:hidden">
-          <Button onClick={onTestNow} variant="primary" size="sm" className="cursor-pointer">Testar</Button>
+          <Button onClick={onTestNow} variant="primary" size="sm" className="cursor-pointer font-black uppercase italic text-[10px]">
+            Testar <span className="text-violet-300 px-0.5">&gt;</span>
+          </Button>
         </div>
 
       </div>
